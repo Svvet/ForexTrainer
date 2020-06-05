@@ -71,3 +71,11 @@ button:hover {
 .position {
 	display: flex;
 }
+
+.special-buttons {
+	display: flex;
+}
+
+.special-buttons button {
+	margin: 0 10px;
+}

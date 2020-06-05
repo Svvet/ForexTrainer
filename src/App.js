@@ -101,6 +101,11 @@ let equityAmount = 0;
 equity.innerText = `${equityAmount}$`;
 
 const updateAtForward = () => {
+	if (idx == dataFromJSON.length - 1) {
+		console.log("End of data");
+
+		return;
+	}
 	endOfData++;
 	currentData = dataFromJSON.slice(0, endOfData);
 	chart.data = currentData;
@@ -146,10 +151,6 @@ const newPosition = (id, price, date, amount, type) => {
 
 const deletePosition = (el, id) => {
 	divPositions.removeChild(el);
-	console.log(
-		typeof budgetAmount,
-		typeof positions.find((val) => val.id == id).profit
-	);
 
 	updateBudget(id);
 	updateProfit(id);
@@ -192,6 +193,13 @@ const addPosition = (id, price, date, amount, type) => {
 	posDiv.appendChild(createButton(id, posDiv));
 	divPositions.appendChild(posDiv);
 };
+const closeAllPositions = () => {
+	let ids = positions.map((val) => val.id);
+	let divs = document.querySelectorAll(".position");
+	ids.forEach((val, idx) => {
+		deletePosition(divs[idx], val);
+	});
+};
 
 buttons.forEach((val) => {
 	val.addEventListener("click", (e) => {
@@ -208,6 +216,9 @@ buttons.forEach((val) => {
 				break;
 			case "random":
 				randomData();
+				break;
+			case "close-all":
+				closeAllPositions();
 				break;
 		}
 		console.log(positions);
