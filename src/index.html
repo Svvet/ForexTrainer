@@ -11,60 +11,117 @@
 		<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 	</head>
 	<body>
-		<h1>Forex Trainer</h1>
+		<div id="logo">
+			<img src="./Forex Trainer.png" alt="Forex Trainer Logo" />
+		</div>
 		<!-- Chart -->
-		<div id="chartdiv"></div>
-		<!-- End of Chart -->
-		<div class="special-buttons">
-			<button id="random">Random data</button>
-			<button id="close-all">Close all</button>
-		</div>
-		<h3 class="actual-price"></h3>
-		<div class="buttons">
-			<div class="amount">
-				<select name="buy" class="buy">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select>
-				<button id="buy-btn">BUY</button>
+		<div class="main">
+			<div class="chart">
+				<div id="chartdiv"></div>
+				<div class="utility">
+					<div id="utility-btns">
+						<button class="utility-btn" id="random">Random data</button>
+						<button class="utility-btn" id="forward-btn">Forward</button>
+						<button class="utility-btn" id="reset-btn">Reset</button>
+					</div>
+					<div class="transaction-container">
+						<div class="transaction">
+							<button id="buy-btn">Buy</button>
+							<select name="buy" class="buy">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							<button id="sell-btn">Sell</button>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="amount">
-				<select name="sell" class="sell">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-				</select>
-				<button id="sell-btn">SELL</button>
+			<div class="budget-positions-div">
+				<div class="budget-item">
+					<h3 class="">Current Price: 100$</h3>
+					<div class="bar"></div>
+				</div>
+				<div class="budget-item">
+					<h3>Budget: <span id="budget-amount">10$</span></h3>
+					<div class="bar"></div>
+				</div>
+				<div class="budget-item">
+					<h3>Profit: <span id="profit">10$</span></h3>
+					<div class="bar"></div>
+				</div>
+				<div class="budget-item">
+					<h3>Equity: <span id="equity">10$</span></h3>
+					<div class="bar"></div>
+				</div>
+
+				<div class="positions">
+					<div class="budget-item">
+						<h3>Positions:</h3>
+						<div class="bar"></div>
+					</div>
+
+					<button id="close-all">Close All</button>
+				</div>
 			</div>
-		</div>
 
-		<button id="forward-btn">Forward</button>
+			<!-- End of Chart
+			<div class="special-buttons">
+				<button id="random">Random data</button>
+				<button id="close-all">Close all</button>
+			</div>
+			<h3 class="actual-price"></h3>
+			<div class="buttons">
+				<div class="amount">
+					<select name="buy" class="buy">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<button id="buy-btn">BUY</button>
+				</div>
+				<div class="amount">
+					<select name="sell" class="sell">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<button id="sell-btn">SELL</button>
+				</div>
+			</div>
 
-		<h3>Budget</h3>
-		<div class="budget">
-			<p>Budget: <span id="budget-amount">10$</span></p>
-			<p>Profit: <span id="profit">10$</span></p>
-			<p>Equity: <span id="equity">10$</span></p>
-		</div>
+			<h3>Budget</h3>
+			<div class="budget">
+				<p>Budget: <span id="budget-amount">10$</span></p>
+				<p>Profit: <span id="profit">10$</span></p>
+				<p>Equity: <span id="equity">10$</span></p>
+			</div>
 
-		<br />
-		<div class="positions">
-			<h3>Positions</h3>
+			<br />
+			<div class="positions">
+				<h3>Positions</h3>
+			</div> -->
 		</div>
 		<script src="./App.js"></script>
 	</body>

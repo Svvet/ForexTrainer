@@ -5,7 +5,7 @@ const profit = document.getElementById("profit");
 const equity = document.getElementById("equity");
 const forward = document.getElementById("forward");
 const divPositions = document.querySelector(".positions");
-const h3Price = document.querySelector(".actual-price");
+// const h3Price = document.querySelector(".actual-price");
 
 let priceNow;
 let dataFromJSON;
@@ -35,7 +35,7 @@ function randomData() {
 		dataFromJSON = data.slice(startIdx);
 		currentData = dataFromJSON.slice(0, endOfData);
 		priceNow = currentData[idx].close;
-		h3Price.innerHTML = `${priceNow}$`;
+		// h3Price.innerHTML = `${priceNow}$`;
 		chart.data = currentData;
 	});
 }
@@ -113,7 +113,7 @@ const updateAtForward = () => {
 	idx++;
 
 	priceNow = currentData[idx].close;
-	h3Price.innerHTML = `${priceNow}$`;
+	// h3Price.innerHTML = `${priceNow}$`;
 	const profitSpans = document.querySelectorAll(".profit-span");
 	profitSpans.forEach((val, i) => {
 		let { price, amount, type } = positions[i];

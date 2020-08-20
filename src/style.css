@@ -5,77 +5,106 @@
 --color4: hsla(12%, 36%, 44%, 1);
 --color5: hsla(10%, 43%, 22%, 1); 
 */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
 
 * {
 	box-sizing: border-box;
-	font-family: "Roboto", sans-serif;
+	font-family: "Nunito", sans-serif;
 	margin: 0;
 }
 body {
-	background-color: #d8cfcf;
+	background-color: #ffffff;
 }
-
-h1 {
+button {
+	border: none;
+	color: #f4fbff;
+}
+#logo {
+	margin-top: 10px;
 	text-align: center;
-	letter-spacing: 8px;
-	background-color: #343e3d;
-	color: #62929e;
+}
+.main {
+	display: flex;
+	flex: auto;
 }
 
-.chart-container {
-	margin: auto;
-	background-color: rgba(162, 60, 172, 0.568);
-	height: 300px;
-	width: 50vw;
-}
 #chartdiv {
 	width: 100%;
-	height: 500px;
+	min-height: 500px;
+	height: 50%;
 }
-
-.buttons {
-	margin: 10px;
-
+.chart {
+	flex: 10;
+}
+.budget-positions-div {
+	flex: 7;
+	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 }
-.amount {
-	border: solid 1px black;
-	width: 150px;
-	text-align: center;
+.budget-positions-div h3 {
+	font-weight: 600;
+	letter-spacing: 0.15em;
+	font-size: 36px;
+	color: #3423a6;
 }
-.buy {
-	margin: 10px;
-	color: green;
+.bar {
+	height: 5px;
+	width: 47px;
+	background-color: #007979;
 }
-.sell {
-	margin: 10px;
-	color: maroon;
+.positions {
+	margin-top: 79px;
 }
-
-#buy-btn {
-	color: green;
-	margin: 10px;
+#utility-btns {
+	flex: 5;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+}
+.utility-btn {
+	background-color: #3423a6;
+	color: #f4fbff;
 	border: none;
+	font-weight: 600;
+	font-size: 36px;
 }
-#sell-btn {
-	color: maroon;
-	margin: 10px;
-	border: none;
-}
-button:hover {
+.utility-btn:hover {
 	cursor: pointer;
 }
-.position {
+.utility {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
-.special-buttons {
+.transaction-container {
 	display: flex;
+	/* margin-right: 150px; */
+	justify-content: center;
+	flex: 4;
 }
+.transaction {
+	display: flex;
+	justify-content: space-around;
 
-.special-buttons button {
-	margin: 0 10px;
+	width: 70%;
+}
+.transaction button {
+	font-size: 48px;
+}
+#buy-btn {
+	background-color: #23a66f;
+}
+#sell-btn {
+	background-color: #c14949;
+}
+.buy {
+	font-size: 48px;
+	text-align-last: center;
+	background-color: #989898;
+	color: #f4fbff;
+}
+.buy option {
+	font-size: 20px;
+	text-align: center;
 }
