@@ -14,14 +14,23 @@
 }
 body {
 	background-color: #ffffff;
+
+	max-width: 1920px;
 }
 button {
 	border: none;
 	color: #f4fbff;
 }
+button:hover {
+	cursor: pointer;
+}
+select:hover {
+	cursor: pointer;
+}
 #logo {
 	margin-top: 10px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 .main {
 	display: flex;
@@ -53,7 +62,7 @@ button {
 	width: 47px;
 	background-color: #007979;
 }
-.positions {
+.positions-div {
 	margin-top: 79px;
 }
 #utility-btns {
@@ -71,6 +80,7 @@ button {
 }
 .utility-btn:hover {
 	cursor: pointer;
+	background-color: #281c77;
 }
 .utility {
 	display: flex;
@@ -91,20 +101,80 @@ button {
 }
 .transaction button {
 	font-size: 48px;
+	border-radius: 5px;
 }
 #buy-btn {
 	background-color: #23a66f;
 }
+#buy-btn:hover {
+	background-color: #229062;
+}
 #sell-btn {
 	background-color: #c14949;
+}
+#sell-btn:hover {
+	background-color: #9d3838;
 }
 .buy {
 	font-size: 48px;
 	text-align-last: center;
 	background-color: #989898;
 	color: #f4fbff;
+	border-radius: 5px;
 }
 .buy option {
 	font-size: 20px;
 	text-align: center;
+}
+
+.amount {
+	letter-spacing: normal;
+	color: #191150;
+}
+.position {
+	display: flex;
+	margin-bottom: 5px;
+	align-items: center;
+	margin-right: 30px;
+}
+.position p {
+	letter-spacing: 0.15em;
+	font-size: 14px;
+	font-weight: bolder;
+	margin-right: 10px;
+}
+.position button {
+	background: white;
+	border: 1px black solid;
+	color: black;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 15px;
+	margin-right: 15px;
+}
+
+#close-all {
+	background: #3423a6;
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 5px;
+}
+#close-all:hover {
+	background-color: #281c77;
+}
+.positions {
+	margin-top: 10px;
+}
+.profit {
+	color: #23a66f;
+}
+.loss {
+	color: #c14949;
+}
+#actual-price {
+	transition: ease-out 0.2s;
+}
+#budget-amount {
+	transition: ease-out 0.2s;
 }
